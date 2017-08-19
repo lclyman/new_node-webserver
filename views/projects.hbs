@@ -1,0 +1,63 @@
+{{> header}}
+  <body>
+    {{> navbar}}
+  <div class="container">
+    {{> page_title }}
+
+  	<h3>Enter a birthdate to see how long they've been alive</h3>
+			<br /><br />
+	  <table>
+	    <tbody>
+	      <tr>
+	        <td>
+	          <div class='form-group'>
+	            <label for='month'>Month</label>
+	            <select name="month" id="month" required>
+	              <option value="1">January</option>
+	              <option value="2">February</option>
+	              <option value="3">March</option>
+	              <option value="4">April</option>
+	              <option value="5">May</option>
+	              <option value="6">June</option>
+	              <option value="7">July</option>
+	              <option value="8">August</option>
+	              <option value="9">September</option>
+	              <option value="10">October</option>
+	              <option value="11">November</option>
+	              <option value="12">December</option>
+	            </select>
+	          </div>
+
+	          <div class='form-group'>
+	            <label for='day'>Day</label>
+	            <select id="day" required/>
+	            </select>
+	          </div>
+
+	          <div class='form-group'>
+	            <label for='year'>Year</label>
+	            <select id="year" required/>
+	          </div>
+	        </td>
+	      </tr>
+	  </table>
+
+		<br /><div id="text1" class="text1"></div><br /><br />
+
+	  <a href="#" class="btn btn-primary" onclick="displayAll();">Get Your Days</a>&nbsp;&nbsp;&nbsp;
+		<a href="#" class="btn btn-primary" onclick="guessNumber();">Number Guess</a>&nbsp;&nbsp;&nbsp;
+		<a href="#" class="btn btn-primary" onclick="areWeThereYet();">Annoyamatic</a>&nbsp;&nbsp;&nbsp;
+		<input type="text" id="name" placeholder="Enter your name" />
+		<a href="#" class="btn btn-primary" onclick="listName();">List your name</a>
+
+	  <br /><br /><br />
+
+		<div id="nameList"></div>
+
+			{{> showDays}}
+			{{> guessNumber}}
+     	{{> footer}}
+  </div>
+ 			{{>bottom_js}}
+  </body>
+</html>

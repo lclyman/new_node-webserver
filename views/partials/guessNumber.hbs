@@ -1,0 +1,75 @@
+<script>
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+
+function guessNumber(){
+  var secretNumber = randomIntFromInterval(1, 20);
+  var numGuess;
+  var guessesAllowed = 7;
+  var guessesUsed = 1;
+  var guesses = 1;
+
+  for (var i = 1; i <= guessesAllowed; i++){
+    numGuess = Number(prompt("Guess my number. It's between 1 and 20!"));
+
+    if(numGuess === secretNumber){
+      alert("Congratulations!! You guessed the right number ("+ secretNumber + ") in " + i + " guesses.");
+      break;
+      } else if(numGuess < secretNumber ) {
+        alert("Sorry, your guess was too low..! You have " + (guessesAllowed - guessesUsed) + " guesses left." );
+      } else{
+        alert("Sorry, your guess was too high..! You have " + (guessesAllowed - guessesUsed) + " guesses left." );
+      }
+
+    guesses +=1;
+    guessesUsed +=1;
+
+    if (guesses === guessesAllowed){
+      alert("Sorry, you've run out of guesses!")
+      break;
+    }
+  }
+}
+
+function listName(){
+  var str = document.getElementById('name').value;
+  var chars = str.split('');
+  var count = 0;
+  var div = document.getElementById('nameList');
+  div.innerHTML = "";
+  var divStr = '<ul>';
+
+  while(count < str.length){
+    divStr += '<li>'+ chars[count] + '</li>';
+    count ++;
+  }
+  divStr += '</ul>';
+  div.innerHTML = div.innerHTML + divStr;
+}
+
+function areWeThereYet(){
+  var answer = prompt("Are we there yet?");
+
+  while(answer.indexOf('yes') === -1){
+    var answer = prompt("Are we there yet?");
+  }
+  alert("YAY, WE MADE IT!!!");
+}
+
+function doThis(){
+  var myTimer = setInterval(function(){
+    alert("This is an anonymous function..!");
+  }, 2000);
+
+  // var myTimer = setInterval(areWeThereYet, 8000);
+
+  setInterval(function(){
+    clearInterval(myTimer);
+  }, 5000);
+}
+
+
+</script>
