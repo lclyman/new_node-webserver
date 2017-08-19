@@ -71,7 +71,7 @@ app.get('/projects', (req, res) => {
     });
   
   });
-dfdf
+
 app.get('/contact', (req, res) => {
   
     res.render('contact.hbs', {
