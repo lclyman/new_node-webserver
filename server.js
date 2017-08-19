@@ -48,7 +48,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
   
   res.render('home.hbs', {
-    pageTitle: 'Hello Express!',
+    pageTitle: 'Hello Node Express!',
     welcomeMessage: 'Welcome to my website!!',
     name: 'Larry Clyman',
     age: 61,
