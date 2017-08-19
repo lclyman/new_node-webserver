@@ -32,7 +32,7 @@ app.use((req, res, next)=>{
   next();
 });
 
-// maintenance middleware ***********************
+// maintenance middleware ******************
 
 // app.use((req, res, next)=>{
 //   res.render('maintenance.hbs', {
@@ -46,7 +46,7 @@ app.use(express.static(__dirname + '/public'));
 // views ****************************************
 
 app.get('/', (req, res) => {
-  
+
   res.render('home.hbs', {
     pageTitle: 'Hello Node Express!',
     welcomeMessage: 'Welcome to my website!!',
@@ -65,27 +65,27 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
-  
+
     res.render('projects.hbs', {
       pageTitle: ' My Projects',
     });
-  
+
   });
 
 app.get('/contact', (req, res) => {
-  
+
     res.render('contact.hbs', {
       pageTitle: 'Contact Page',
     });
-  
+
   });
 
 app.get('/login', (req, res) => {
-  
+
     res.render('login.hbs', {
       pageTitle: 'Login Page',
     });
-  
+
   });
 
 app.get('/help', (req, res) => {
